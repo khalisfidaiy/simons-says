@@ -1,0 +1,26 @@
+span {
+  font-size: 20px;;
+}
+
+.grid-item .btn{
+    width:100px;
+    height:100px;
+}
+  
+.grid-item .btn:hover {
+  background-color:rgb(255, 0, 0);
+  cursor: pointer;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  background-color: white;
+  padding: 10px;
+}  
+
+.grid-item {
+  background-color: white;
+  padding: 20px; 
+}
+  

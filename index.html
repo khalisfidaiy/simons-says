@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- link to simon-says.js -->
+<script type="text/javascript" src="simons-says.js"></script>
+
+<!-- link to simon-says.css -->
+<link rel="stylesheet" href="simons-says.css" />
+</head>
+
+<body>
+
+<div class="container text-center w-50"><!-- MENU container -->
+<h3>SIMON'S SAYS GAME</h3>
+<button id="start_btn" class="btn btn-block btn-success" onclick="start_game()">START</button><br>
+    <div class="row">
+        <div class="col-sm-6">
+            <span>Round<br><a id="roundnum">0</a></span>
+        </div>
+        <div class="col-sm-6">
+            <span>Score:<br><a id="result">None</a></span>
+        </div>
+    </div>
+</div>
+
+<div class="container pt-3"><!-- open BOX container -->
+    <div class="row"><!-- Open row -->
+        <div class="col-sm-12 d-flex justify-content-center"><!-- Open col-sm-12 -->
+            <div class="grid-container"><!-- open grid-container-->
+                
+                <div class="grid-item">
+                <div  id="qb_0" class="btn btn-secondary" onclick="answer_select(0)"></div>
+                </div>
+                <div class="grid-item">
+                <div id="qb_1" class="btn btn-secondary" onclick="answer_select(1)"></div>
+                </div>
+                <div class="grid-item">
+                <div id="qb_2" class="btn btn-secondary" onclick="answer_select(2)"></div>
+                </div>
+
+                <div class="grid-item">
+                <div id="qb_3" class="btn btn-secondary" onclick="answer_select(3)"></div>
+                </div>
+                <div class="grid-item">
+                <div id="qb_4" class="btn btn-secondary" onclick="answer_select(4)"></div>
+                </div>
+                <div class="grid-item">
+                <div id="qb_5" class="btn btn-secondary" onclick="answer_select(5)"></div>
+                </div>
+            
+                <div class="grid-item">
+                <div id="qb_6" class="btn btn-secondary" onclick="answer_select(6)"></div>
+                </div>
+                <div class="grid-item">
+                <div id="qb_7" class="btn btn-secondary" onclick="answer_select(7)"></div>
+                </div>
+                <div class="grid-item">
+                <div id="qb_8" class="btn btn-secondary" onclick="answer_select(8)"></div>
+                </div>
+            
+            </div><!-- Close grid-container -->
+        </div><!-- Close col-sm-12 -->
+    </div><!-- close row -->
+</div><!-- Close Box container -->
+
+</body>
+
+</html>
