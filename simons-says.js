@@ -4,6 +4,7 @@ let q_box = [];// question box, value set by simon_says()
 let a_box = [];// answer box, value set by answer_select()
 let index = 0;// for locating the question & answer
 let startGame = false; //boolean to set condition
+let set_hover = true;
 
 //function to start the game
 function start_game() {
@@ -21,6 +22,8 @@ function start_game() {
     alert("Game is done! Click 'RE-START' to play.");
     document.getElementById("start_btn").disabled = false;
     document.getElementById("start_btn").innerText = "RE-START";
+    q_box.length = 0;
+    a_box.length = 0;
   }
 }
 
@@ -36,12 +39,20 @@ function simon_says(){
     
     if(index < q_box.length){
       simon_says();
+    } else {
+      setTimeout(function(){
+        set_hover = true;
+        setHover();
+      }, 1500);
     }
   }, 1000);
+  
+  
 }
 
 //function to click which box to answer
 function answer_select(ans_box){
+  
   if(startGame){
   a_box.push(ans_box);
   
@@ -51,10 +62,14 @@ function answer_select(ans_box){
           document.getElementById("result").innerText = "CORRECT!";
           document.getElementById("result").style.color = "green";
         a_box.length = 0;
+        set_hover = false;
+        setHover();
         start_game();
       } else {
         document.getElementById("result").innerText = "WRONG";
         document.getElementById("result").style.color = "red";
+        set_hover = false;
+        setHover();
         setTimeout(function(){
           document.getElementById("result").innerText = "RE-START to play";
           document.getElementById("result").style.color = "";
@@ -81,3 +96,40 @@ function check_result(ans_num){
   }
   return all_correct;
 }
+
+function setHover(){
+  let id;
+  if(!set_hover){
+    for(let i=0; i < 9; i++){
+      id = document.getElementById("qb_"+i);
+      //id.disabled = true;
+      id.classList.remove("btn-hover");
+      id.classList.add("btn-disable");
+    }
+  } else {
+    for(let i=0; i < 9; i++){
+      id = document.getElementById("qb_"+i);
+      //id.disabled = false;
+      id.classList.add("btn-hover");
+      id.classList.remove("btn-disable");
+    }
+  }
+}
+/*
+function disableBox(){
+  let id_disable;
+  if(!disable_box){
+    for(let j=0; j < 9; j++){
+      id_disable = document.getElementById("qb_"+j);
+      //id.disabled = true;
+      id_disable.classList.remove("btn-disable");
+    }
+  } else {
+    for(let j=0; j < 9; j++){
+      id_disable = document.getElementById("qb_"+j);
+      //id.disabled = true;
+      id_disable.classList.add("btn-disable");
+    }
+  }
+}
+*/

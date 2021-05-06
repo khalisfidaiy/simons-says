@@ -7,9 +7,13 @@ span {
     height:100px;
 }
   
-.grid-item .btn:hover {
+.btn-hover:hover {
   background-color:rgb(255, 0, 0);
   cursor: pointer;
+}
+
+.btn-disable {
+  pointer-events: none;
 }
 
 .grid-container{
