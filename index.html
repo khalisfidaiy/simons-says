@@ -18,9 +18,10 @@
 
 <body>
 
-<div class="container text-center w-50"><!-- MENU container -->
+<div class="container text-center"><!-- MENU container -->
 <h3>SIMON'S SAYS GAME</h3>
-<button id="start_btn" class="btn btn-block btn-success" onclick="start_game()">START</button><br>
+<button id="start_btn" class="btn btn-block btn-success w-75 mx-auto" onclick="start_game()">START</button><br>
+<a class="mx-auto" data-toggle="modal" data-target="#instruction" href="#instruction">How to play?</a>
     <div class="row">
         <div class="col-sm-6">
             <span>Round<br><a id="roundnum">0</a></span>
@@ -31,46 +32,68 @@
     </div>
 </div>
 
+
 <div class="container pt-3"><!-- open BOX container -->
-    <div class="row"><!-- Open row -->
+    <div class="row">
         <div class="col-sm-12 d-flex justify-content-center"><!-- Open col-sm-12 -->
             <div class="grid-container"><!-- open grid-container-->
                 
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div  id="qb_0" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(0)"></div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_1" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(1)"></div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_2" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(2)"></div>
                 </div>
 
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_3" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(3)"></div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_4" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(4)"></div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_5" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(5)"></div>
                 </div>
             
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_6" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(6)"></div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_7" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(7)"></div>
                 </div>
-                <div class="grid-item">
+                <div class="grid-item d-flex justify-content-center">
                 <div id="qb_8" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(8)"></div>
                 </div>
             
             </div><!-- Close grid-container -->
         </div><!-- Close col-sm-12 -->
     </div><!-- close row -->
-</div><!-- Close Box container -->
+</div><!-- close Box container -->
 
+
+
+<!-- Instruction Modal -->
+<div class="modal fade" id="instruction" tabindex="-1" aria-labelledby="instructionlabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h6 class="modal-title" id="instructionlabel">How to play?</h6>
+                <a class="btn-close" data-dismiss="modal" aria-label="Close" href="#">X</a>
+            </div>
+
+            <div class="modal-body">
+
+            </div>
+
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn btn-dark" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
