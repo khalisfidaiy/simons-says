@@ -1,10 +1,12 @@
 //global variable
-const round_num = 5;// to set how many rounds to play
+const round_num = 15;// to set how many rounds to play
 let q_box = [];// question box, value set by simon_says()
 let a_box = [];// answer box, value set by answer_select()
 let index = 0;// for locating the question & answer
 let startGame = false; //boolean to set condition
 let set_hover = true;
+
+document.getElementById("no_of_round").innerText = round_num;
 
 //function to start the game
 function start_game() {

@@ -9,14 +9,11 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-<!-- link to simon-says.js -->
-<script type="text/javascript" src="simons-says.js"></script>
-
 <!-- link to simon-says.css -->
 <link rel="stylesheet" href="simons-says.css" />
 </head>
 
-<body>
+<body class="bg-light">
 
 <div class="container text-center"><!-- MENU container -->
 <h3>SIMON'S SAYS GAME</h3>
@@ -24,10 +21,10 @@
 <a class="mx-auto" data-toggle="modal" data-target="#instruction" href="#instruction">How to play?</a>
     <div class="row">
         <div class="col-sm-6">
-            <span>Round<br><a id="roundnum">0</a></span>
+            <span class="info-section">Round<br><a id="roundnum">0</a></span>
         </div>
         <div class="col-sm-6">
-            <span>Score:<br><a id="result">None</a></span>
+            <span class="info-section">Score:<br><a id="result">None</a></span>
         </div>
     </div>
 </div>
@@ -36,7 +33,7 @@
 <div class="container pt-3"><!-- open BOX container -->
     <div class="row">
         <div class="col-sm-12 d-flex justify-content-center"><!-- Open col-sm-12 -->
-            <div class="grid-container"><!-- open grid-container-->
+            <div class="grid-container border"><!-- open grid-container-->
                 
                 <div class="grid-item d-flex justify-content-center">
                 <div  id="qb_0" class="btn btn-secondary btn-hover btn-disable" onclick="answer_select(0)"></div>
@@ -78,14 +75,21 @@
 <!-- Instruction Modal -->
 <div class="modal fade" id="instruction" tabindex="-1" aria-labelledby="instructionlabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content bg-light">
             <div class="modal-header">
                 <h6 class="modal-title" id="instructionlabel">How to play?</h6>
                 <a class="btn-close" data-dismiss="modal" aria-label="Close" href="#">X</a>
             </div>
 
             <div class="modal-body">
-
+                This game has the total of <u><a id="no_of_round">?</a> rounds</u>.<br><br>
+                Below are the instruction on how to play the game:
+                <ul style="list-style-type: none;">
+                    <li>Step 1: Click on '<span class="font-weight-bold">START</span>' button to start.</li><br>
+                    <li>Step 2: When game start, the 3x3 dark-gray box will be highlighted in <span class="text-danger font-weight-bold">RED</span> one by one random. <span class="font-weight-bold">MEMORIES</span> the sequence until it stop highlighting.</li><br>
+                    <li>Step 3: Click on the box on which you memories it. If all answer <span class="text-success font-weight-bold">CORRECT</span>, you will move to the next round. Otherwise, the game will be <span class="text-danger font-weight-bold">STOP</span> and re-start the game back to round 1.</li><br><br>
+                    <li><a style="font-weight: bolder;">NOTE:</a><br>The gray box will be highlighted randomly. How many time will be depends on the number of rounds. e.g <span class="font-weight-bold">if you in round 3, the box will be highlighted 3 times.</span></li>
+                </ul>
             </div>
 
             <div class="modal-footer d-flex justify-content-center">
@@ -94,6 +98,10 @@
         </div>
     </div>
 </div>
+
+
+<!-- link to simon-says.js -->
+<script type="text/javascript" src="simons-says.js"></script>
 </body>
 
 </html>
