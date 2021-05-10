@@ -7,6 +7,7 @@ let startGame = false; //boolean to set condition
 let set_hover = true;
 
 document.getElementById("no_of_round").innerText = round_num;
+document.getElementById("total_round").innerText = round_num;
 
 //function to start the game
 function start_game() {
